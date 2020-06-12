@@ -15,7 +15,7 @@ class CommentsAdmin(admin.ModelAdmin):
 
 
 class SocialAdmin(admin.ModelAdmin):
-    list_display = ()
+    list_display = ('facebook','twitter','github','instagram','likedin')
 
 admin.site.register(About, AboutAdmin)
 admin.site.register(Work, WorkAdmin)
