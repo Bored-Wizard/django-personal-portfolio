@@ -55,19 +55,19 @@
         <h1 class="text-light"><a href="index.html">Barman Sujan</a></h1>
         {% for url in social%}
         <div class="social-links mt-3 text-center">
-          {% if twiter.url %}
+          {% if url.twiter.url %}
           <a href="url.twitter" class="twitter"><i class="bx bxl-twitter"></i></a>
           {% endif %}
-          {% if facebook.url %}
+          {% if url.facebook.url %}
           <a href="url.facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
           {% endif %}
-          {% if instagram.url %}
+          {% if url.instagram.url %}
           <a href="url.instagram" class="instagram"><i class="bx bxl-instagram"></i></a>
           {% endif %}
-          {% if skype.url %}
+          {% if url.skype.url %}
           <a href="url.skype" class="google-plus"><i class="bx bxl-skype"></i></a>
           {% endif %}
-          {% if likedin.url %}
+          {% if url.likedin.url %}
           <a href="url.likedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           {% endif %}
         </div>
