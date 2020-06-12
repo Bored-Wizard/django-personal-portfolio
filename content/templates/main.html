@@ -55,19 +55,19 @@
         <h1 class="text-light"><a href="index.html">Barman Sujan</a></h1>
         {% for url in social%}
         <div class="social-links mt-3 text-center">
-          {% if url.twitter %}
+          {% if twitter.url %}
           <a href="url.twitter" class="twitter"><i class="bx bxl-twitter"></i></a>
           {% endif %}
-          {% if url.facebook %}
+          {% if facebook.url %}
           <a href="url.facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
           {% endif %}
-          {% if url.instagram %}
+          {% if instagram.url %}
           <a href="url.instagram" class="instagram"><i class="bx bxl-instagram"></i></a>
           {% endif %}
-          {% if url.skype %}
+          {% if skype.url %}
           <a href="url.skype" class="google-plus"><i class="bx bxl-skype"></i></a>
           {% endif %}
-          {% if url.likedin %}
+          {% if likedin.url %}
           <a href="url.likedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           {% endif %}
         </div>
@@ -94,7 +94,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>{{profile.name}}</h1>
-      <p>I'm <span class="typed" data-typed-items="Developer, Freleancer, BackEnder"></span></p>
+      <p>I'm <span class="typed" data-typed-items="Developer, Freelancer, BackEnder"></span></p>
     </div>
   </section><!-- End Hero -->
 
