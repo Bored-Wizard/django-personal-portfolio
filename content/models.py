@@ -34,4 +34,7 @@ class Social(models.Model):
     twiter = models.URLField(blank=True)
     skype = models.URLField(blank=True)
     github = models.URLField(blank=True)
-    
+
+
+class Googleapi(models.Model):
+    googleapi = models.URLField(blank=True)
