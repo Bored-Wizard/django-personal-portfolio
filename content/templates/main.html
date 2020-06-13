@@ -9,16 +9,15 @@
   <title>Barman Sujan</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
-  {% for i in about%}
+
   <style>
   #hero {
   width: 100%;
   height: 100vh;
-  background: url("{{i.profilepic.url}}") top center;
+  background: url("{{profile.profilepic.url}}") top center;
   background-size: cover;
 }
   </style>
-  {% endfor %}
 
   <!-- Favicons -->
   <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
@@ -50,29 +49,25 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        {% for pic in about %}
-        <img src="{{pic.profilepic.url}}" alt="" class="img-fluid rounded-circle">
+        <img src="{{profile.profilepic.url}}" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Barman Sujan</a></h1>
-        {% for url in social%}
         <div class="social-links mt-3 text-center">
-          {% if url.twiter.url %}
+          {% if url.twiter %}
           <a href="url.twiter.url" class="twitter"><i class="bx bxl-twitter"></i></a>
           {% endif %}
           {% if url.facebook.url %}
-          <a href="url.facebook.url" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="url.facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
           {% endif %}
           {% if url.instagram.url %}
-          <a href="url.instagram.url" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="url.instagram" class="instagram"><i class="bx bxl-instagram"></i></a>
           {% endif %}
           {% if url.skype.url %}
-          <a href="url.skype.url" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="url.skype" class="google-plus"><i class="bx bxl-skype"></i></a>
           {% endif %}
           {% if url.likedin.url %}
-          <a href="url.likedin.url" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="url.likedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           {% endif %}
         </div>
-        {% endfor %}
-        {% endfor %}
       </div>
 
       <nav class="nav-menu">
@@ -89,7 +84,6 @@
     </div>
   </header><!-- End Header -->
 
-  {% for profile in about %}
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
@@ -139,7 +133,6 @@
 
       </div>
     </section>
-    {% endfor %}
     <!-- End About Section -->
 
     <!-- ======= Portfolio Section ======= -->
@@ -210,7 +203,6 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
-        {% for cont in about %}
         <div class="section-title">
           <h2>Contact</h2>
           <p>My contact information are listed below.If you are interested then you can contact me on through the information given below.</p>
@@ -223,19 +215,19 @@
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>Location:</h4>
-                <p>{{cont.address }}</p>
+                <p>{{profile.address }}</p>
               </div>
 
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>{{cont.email }}</p>
+                <p>{{profile.email }}</p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Call:</h4>
-                <p>{{cont.phone}}</p>
+                <p>{{profile.phone}}</p>
               </div>
               {% if cont.google_map_api %}
               <iframe src="{{cont.google_map_api}}" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
@@ -245,7 +237,6 @@
           </div>
 
         </div>
-        {% endfor %}
 
       </div>
     </section><!-- End Contact Section -->
