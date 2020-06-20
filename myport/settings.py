@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'content',
+    'newsletter',
 ]
 
 MIDDLEWARE = [
@@ -117,11 +119,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'pportfolio9@gmail.com'
+EMAIL_HOST_PASSWORD = 'sujan123'
+EMAIL_PIRT = 587
+EMAIL_USE_TLS = True
+
+
 try:
     from .local_settings import *
 except ImportError:

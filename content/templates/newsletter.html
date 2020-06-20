@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content%}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>{{profile.name}}</h1>
+      <p>I'm <span class="typed" data-typed-items="Developer, Freelancer, BackEnder"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+<main id="main">
+  <section id="about" class="about">
+    <div class="container">
+        <form class="form-inline">
+            <div class="form-group mx-sm-12 mb-10">
+              <label for="useremail" class="sr-only">Email Address</label>
+              <input type="email" class="form-control" id="useremail" >
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Newsletter</button>
+        </form>
+    </div>
+  </section>
+</main>
+
+
+{% endblock%}

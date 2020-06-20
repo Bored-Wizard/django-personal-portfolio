@@ -19,7 +19,7 @@ class SocialAdmin(admin.ModelAdmin):
 
 
 class GoogleapiAdmin(admin.ModelAdmin):
-    list_display = ('googleapi')
+    list_display = ('googleapi',)
 
 admin.site.register(About, AboutAdmin)
 admin.site.register(Work, WorkAdmin)
