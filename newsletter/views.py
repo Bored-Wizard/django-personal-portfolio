@@ -20,8 +20,8 @@ def newsletter_signup(request):
             subject = "Thank you for joining our newsletter"
             from_email = settings.EMAIL_HOST_USER
             to_email = [instance.email]
-            message = """Welcome to my Newsletter."""
-            send_mail(subject,message,from_email,to_email,fail_silently=False)
+            message = """Welcome to my Newsletter. To unsubscribe goto https://sujanbarman.pythonanywhere.com"""
+            send_mail(subject,message,from_email,to_email,fail_silently=True)
 
     context = {
         'form' : form,
@@ -40,6 +40,11 @@ def newsletter_unsubscribe(request):
         if NewsletterUsers.objects.filter(email=instance.email).exists():
             NewsletterUsers.objects.filter(email=instance.email).delete()
             messages.success(request, "You Have Been Unsubscribe To Our Newsletter", "alert alert-warning alert-dismissible" )
+            subject = "Unsubscription confirmation"
+            from_email = settings.EMAIL_HOST_USER
+            to_email = [instance.email]
+            message = """You have been unsubscribed to our newsletter."""
+            send_mail(subject,message,from_email,to_email,fail_silently=True)
         else:
             messages.warning(request, "Your Email  Desnt Already Exist In Our Database", "alert alert-warning alert-dismissible")
 
