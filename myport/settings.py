@@ -127,7 +127,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'pportfolio9@gmail.com'
-EMAIL_HOST_PASSWORD = 'sujan123'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PIRT = 587
 EMAIL_USE_TLS = True
 
